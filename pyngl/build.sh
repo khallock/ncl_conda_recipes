@@ -21,5 +21,3 @@ fi
      
 cd src
 python setup.py install
-
-rm -rf ${PREFIX}/info
