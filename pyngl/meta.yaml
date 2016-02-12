@@ -60,3 +60,11 @@ requirements:
     - ncl
     - expat
 
+test:
+  requires:
+    - nose
+  imports:
+    - Ngl
+  commands:
+    - cd $SRC_DIR/tests/python && for file in *.py; do echo $file ; nosetests $file ; done | tee pyngl-test.log
+
