@@ -1,0 +1,58 @@
+package:
+  name: ncl
+  version: "6.4.1"
+
+source:
+  svn_url: https://proxy.subversion.ucar.edu/ncldev/ncarg/trunk
+  svn_rev: 16407
+
+build:
+  number: 5
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - libpng 
+    - jasper
+    - jpeg
+    - zlib
+    - hdf4
+    - hdf5
+    - numpy x.x
+    - gcc
+    - python
+    - libnetcdf
+    - proj4
+    - hdfeos2
+    - g2clib
+    - gdal
+    - libiconv
+    - hdfeos5 
+    - curl
+    - cairo [linux]
+    - udunits2
+    - bzip2
+
+  run:
+    - libgcc
+    - libpng
+    - jasper
+    - jpeg
+    - zlib
+    - numpy x.x
+    - python
+    - libnetcdf
+    - hdf5
+    - hdf4
+    - proj4
+    - hdfeos2
+    - g2clib
+    - gdal
+    - libiconv
+    - hdfeos5
+    - curl
+    - cairo [linux]
+    - gcc
+    - udunits2
+    - bzip2
+
