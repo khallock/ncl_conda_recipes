@@ -1,13 +1,13 @@
 package:
   name: ncl
-  version: "6.4.1"
+  version: "6.4.0"
 
 source:
   svn_url: https://proxy.subversion.ucar.edu/ncldev/ncarg/trunk
   svn_rev: 16407
 
 build:
-  number: 5
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -18,7 +18,6 @@ requirements:
     - zlib
     - hdf4
     - hdf5
-    - numpy x.x
     - gcc
     - python
     - libnetcdf
@@ -39,7 +38,6 @@ requirements:
     - jasper
     - jpeg
     - zlib
-    - numpy x.x
     - python
     - libnetcdf
     - hdf5
