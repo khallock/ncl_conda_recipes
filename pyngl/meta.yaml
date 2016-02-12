@@ -1,0 +1,60 @@
+package:
+  name: pyngl
+  version: "1.5.0"
+
+source:
+  svn_url: https://proxy.subversion.ucar.edu/ncldev/pyngl/trunk
+  svn_rev: 16407
+
+build:
+  number: 1
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - libpng 
+    - jasper
+    - jpeg
+    - zlib
+    - hdf4
+    - hdf5
+    - gcc
+    - python
+    - libnetcdf
+    - proj4
+    - hdfeos2
+    - g2clib
+    - gdal
+    - libiconv
+    - hdfeos5 
+    - curl
+    - cairo [linux]
+    - udunits2
+    - bzip2
+    - ncl
+    - expat
+
+  run:
+    - libgcc
+    - libpng
+    - jasper
+    - jpeg
+    - zlib
+    - python
+    - libnetcdf
+    - hdf5
+    - hdf4
+    - proj4
+    - hdfeos2
+    - g2clib
+    - gdal
+    - libiconv
+    - hdfeos5
+    - curl
+    - cairo [linux]
+    - gcc
+    - udunits2
+    - bzip2
+    - ncl
+    - expat
+
