@@ -3,7 +3,7 @@ package:
   version: "6.4.0"
 
 source:
-  svn_url: https://proxy.subversion.ucar.edu/ncldev/ncarg/trunk
+  svn_url: https://subversion.ucar.edu/ncldev/ncarg/trunk
   svn_rev: 16407
 
 build:
