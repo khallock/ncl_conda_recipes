@@ -33,7 +33,7 @@ requirements:
     - udunits2
     - bzip2
     - ncl
-    - expat
+    - expat [linux]
 
   run:
     - libgcc
@@ -58,7 +58,7 @@ requirements:
     - udunits2
     - bzip2
     - ncl
-    - expat
+    - expat [linux]
 
 test:
   requires:
@@ -66,5 +66,5 @@ test:
   imports:
     - Ngl
   commands:
-    - cd $SRC_DIR/tests/python && for file in *.py; do echo $file ; nosetests $file ; done | tee pyngl-test.log
+    - cd $SRC_DIR/src/examples && for file in xy2.py; do echo $file ; nosetests $file ; done | tee pyngl-test.log
 
