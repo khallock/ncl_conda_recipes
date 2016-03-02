@@ -7,6 +7,7 @@ export CPPFLAGS="-I${PREFIX}/include"
 export CFLAGS="-I${PREFIX}/include"
 export HAS_CAIRO=1
 export F2CLIBS=gfortran
+export PNG_PREFIX=${PREFIX}
 export NCARG_ROOT=${PREFIX}
 
 if [ "$(uname)" = "Darwin" ]; then
