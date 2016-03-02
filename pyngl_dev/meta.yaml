@@ -1,0 +1,67 @@
+package:
+  name: pyngl
+
+source:
+  svn_url: https://proxy.subversion.ucar.edu/ncldev/pyngl/trunk
+
+build:
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - libpng 
+    - jasper
+    - jpeg
+    - zlib
+    - hdf4
+    - hdf5
+    - numpy x.x
+    - gcc
+    - python
+    - libnetcdf
+    - proj4
+    - hdfeos2
+    - g2clib
+    - gdal
+    - libiconv
+    - hdfeos5 
+    - curl
+    - cairo [linux]
+    - udunits2
+    - bzip2
+    - ncl
+    - expat [linux]
+
+  run:
+    - libgcc
+    - libpng
+    - jasper
+    - jpeg
+    - zlib
+    - numpy x.x
+    - python
+    - libnetcdf
+    - hdf5
+    - hdf4
+    - proj4
+    - hdfeos2
+    - g2clib
+    - gdal
+    - libiconv
+    - hdfeos5
+    - curl
+    - cairo [linux]
+    - gcc
+    - udunits2
+    - bzip2
+    - ncl
+    - expat [linux]
+
+test:
+  requires:
+    - nose
+  imports:
+    - Ngl
+  commands:
+    - cd $SRC_DIR/src/examples && for file in xy2.py; do echo $file ; nosetests $file ; done | tee pyngl-test.log
+
