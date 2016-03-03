@@ -5,6 +5,7 @@ source:
   svn_url: https://proxy.subversion.ucar.edu/ncldev/pyngl/trunk
 
 build:
+  number: 0
   detect_binary_files_with_prefix: true
 
 requirements:

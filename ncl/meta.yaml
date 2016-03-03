@@ -19,7 +19,6 @@ requirements:
     - hdf4
     - hdf5
     - gcc
-    - python
     - libnetcdf
     - proj4
     - hdfeos2
@@ -38,7 +37,6 @@ requirements:
     - jasper
     - jpeg
     - zlib
-    - python
     - libnetcdf
     - hdf5
     - hdf4

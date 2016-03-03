@@ -5,6 +5,7 @@ source:
   svn_url: https://subversion.ucar.edu/ncldev/ncarg/trunk
 
 build:
+  number: 0
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -16,7 +17,6 @@ requirements:
     - hdf4
     - hdf5
     - gcc
-    - python
     - libnetcdf
     - proj4
     - hdfeos2
@@ -35,7 +35,6 @@ requirements:
     - jasper
     - jpeg
     - zlib
-    - python
     - libnetcdf
     - hdf5
     - hdf4
