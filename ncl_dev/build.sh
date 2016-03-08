@@ -1,7 +1,10 @@
 #!/bin/sh
 
+svn_revision=r$(svnversion | grep -o '^[0-9]\+')
 echo dev > __conda_version__.txt
 echo r$(svnversion | grep -o '^[0-9]\+')_${PKG_BUILDNUM} > __conda_buildstr__.txt
+
+echo ${svn_revision} > version
 
 export CC=${PREFIX}/bin/gcc
 export CXXFLAGS="-fPIC"
