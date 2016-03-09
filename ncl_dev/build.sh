@@ -1,10 +1,9 @@
 #!/bin/sh
 
 svn_revision=r$(svnversion | grep -o '^[0-9]\+')
-echo dev > __conda_version__.txt
-echo r$(svnversion | grep -o '^[0-9]\+')_${PKG_BUILDNUM} > __conda_buildstr__.txt
+echo dev_${svn_revision} > __conda_version__.txt
 
-echo ${svn_revision} > version
+sed -e "s/^\(#define Nc.*Version\).*$/\1 ${svn_revision}/" -i.backup config/Project && rm config/Project.backup
 
 export CC=${PREFIX}/bin/gcc
 export CXXFLAGS="-fPIC"

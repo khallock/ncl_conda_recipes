@@ -1,11 +1,7 @@
 #!/bin/sh
 
 svn_revision=r$(svnversion | grep -o '^[0-9]\+')
-build_string=$(echo -n ${svn_revision}_np${NPY_VER}py${PY_VER}_${PKG_BUILDNUM} | tr -d '.')
-
-echo dev > __conda_version__.txt
-echo ${build_string} > __conda_buildstr__.txt
-
+echo dev_${svn_revision} > __conda_version__.txt
 echo ${svn_revision} > src/version
 
 export CC=${PREFIX}/bin/gcc
