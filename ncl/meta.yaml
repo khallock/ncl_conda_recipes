@@ -24,6 +24,7 @@ requirements:
     - hdfeos2
     - g2clib
     - gdal
+    - libgdal
     - libiconv
     - hdfeos5 
     - curl
@@ -44,6 +45,7 @@ requirements:
     - hdfeos2
     - g2clib
     - gdal
+    - libgdal
     - libiconv
     - hdfeos5
     - curl
@@ -52,3 +54,6 @@ requirements:
     - udunits2
     - bzip2
 
+test:
+  commands:
+    - ncl -V
