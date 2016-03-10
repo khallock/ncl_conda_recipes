@@ -53,6 +53,7 @@ requirements:
     - gcc
     - udunits2
     - bzip2
+    - krb5
 
 test:
   commands:
