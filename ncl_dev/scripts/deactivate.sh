@@ -1,6 +1,9 @@
 #!/bin/bash
-if [ -z $OLD_NCARG_ROOT ]; then
-    unset NCARG_ROOT
-else
-    export NCARG_ROOT=$OLD_NCARG_ROOT
-fi
+unset NCARG_ROOT
+
+for variable in $(env | grep '^OLD_NCARG_'); do
+    var_name=$(echo "$variable" | cut -d= -f1)
+    var_value="$(echo -n "$variable" | cut -d= -f2-)"
+    export ${var_name#OLD_}="${var_value}"
+    unset ${var_name}
+done
