@@ -18,6 +18,9 @@ bash configure \
     --with-png=$PREFIX \
     --with-geos=$PREFIX/bin/geos-config \
     --with-kea=$PREFIX/bin/kea-config \
+    --with-mysql=no \
+    --with-pg=no \
+    --with-sqlite3=no \
     --prefix=$PREFIX
 make
 make install
