@@ -1,10 +1,5 @@
 #!/bin/sh
 
-svn_revision=r$(svnversion | grep -o '^[0-9]\+')
-echo dev_${svn_revision} > __conda_version__.txt
-
-sed -e "s/^\(#define Nc.*Version\).*$/\1 ${svn_revision}/" -i.backup config/Project && rm config/Project.backup
-
 export CC=${PREFIX}/bin/gcc
 export CXXFLAGS="-fPIC"
 export LDFLAGS="-L${PREFIX}/lib"
@@ -36,6 +31,8 @@ echo "/*
 
 #define LibSearch ${x11_lib} -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib
 #define IncSearch ${x11_inc} -I${PREFIX}/include -I${PREFIX}/include/freetype2
+
+#define BuildGDAL 1
 
 #endif /* SecondSite */" > config/Site.local
 

@@ -32,12 +32,10 @@ echo "/*
 #define LibSearch ${x11_lib} -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib
 #define IncSearch ${x11_inc} -I${PREFIX}/include -I${PREFIX}/include/freetype2
 
-#define BuildGDAL 1
-
 #endif /* SecondSite */" > config/Site.local
 
 echo -e "n\n" | ./Configure
-make Everything
+make -j4 Everything
 
 ACTIVATE_DIR=$PREFIX/etc/conda/activate.d
 DEACTIVATE_DIR=$PREFIX/etc/conda/deactivate.d
