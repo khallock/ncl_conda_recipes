@@ -22,7 +22,7 @@ bash configure \
     --with-pg=no \
     --with-sqlite3=no \
     --prefix=$PREFIX
-make
+make -j4
 make install
 
 # Make sure GDAL_DATA and set and still present in the package
