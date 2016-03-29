@@ -22,6 +22,7 @@ requirements:
     - kealib
     - libpng
     - gcc
+    - expat
   run:
     - hdf4
     - hdf5
@@ -32,6 +33,7 @@ requirements:
     - kealib
     - libpng
     - gcc
+    - expat
 
 test:
   commands:
