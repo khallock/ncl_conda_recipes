@@ -42,7 +42,7 @@ echo "/*
 #endif /* SecondSite */" > config/Site.local
 
 echo -e "n\n" | ./Configure
-make -j4 Everything
+make Everything
 
 ACTIVATE_DIR=$PREFIX/etc/conda/activate.d
 DEACTIVATE_DIR=$PREFIX/etc/conda/deactivate.d
