@@ -8,8 +8,8 @@ source:
   md5: 573865f3f59ba7b4f8f4cddf223b52a5
 
 build:
-  number: 0
-  string: geos333_0
+  number: 1
+  string: geos333_1
 
 requirements:
   build:
