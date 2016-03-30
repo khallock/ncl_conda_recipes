@@ -31,7 +31,7 @@ requirements:
     - udunits2
     - bzip2
     - ncl
-    - expat [linux]
+    - expat
 
   run:
     - libgcc
@@ -56,7 +56,7 @@ requirements:
     - udunits2
     - bzip2
     - ncl
-    - expat [linux]
+    - expat
 
 test:
   requires:
