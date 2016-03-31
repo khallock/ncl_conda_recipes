@@ -1,7 +1,18 @@
 #!/bin/sh
 
 svn_revision=r$(svnversion | grep -o '^[0-9]\+')
-echo dev_${svn_revision} > __conda_version__.txt
+ver_str=dev_${svn_revision}
+echo "${ver_str}" > __conda_version__.txt
+
+tmpbuild=$(conda search -c khallock "${PKG_NAME}" 2>/dev/null | grep -o "${ver_str}.*$" | awk '{print $2}' | sort -n | tail -1)
+
+if [ ! -z "${tmpbuild}" ]; then
+    buildnum=$((tmpbuild + 1))
+else
+    buildnum=0
+fi
+
+echo ${buildnum} > __conda_buildnum__.txt
 
 sed -e "s/^\(#define Nc.*Version\).*$/\1 ${svn_revision}/" -i.backup config/Project && rm config/Project.backup
 
