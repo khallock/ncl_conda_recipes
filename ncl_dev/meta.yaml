@@ -52,5 +52,5 @@ requirements:
 
 test:
   commands:
-    - ncl -V && NCARG_ROOT=${PREFIX} ${SRC_DIR}/install/make-tarfile/check_files | grep '^<' | grep -v '^< bin/ESMF_RegridWeightGen'
+    - ncl -V && NCARG_ROOT=${PREFIX} ${SRC_DIR}/install/make-tarfile/check_files | grep '^<' | grep -v '^< bin/ESMF_RegridWeightGen' && exit 1 || exit 0
 
