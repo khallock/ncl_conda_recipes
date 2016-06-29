@@ -39,11 +39,11 @@ echo "/*
 echo -e "n\n" | ./Configure
 make Everything
 
-ACTIVATE_DIR=$PREFIX/etc/conda/activate.d
-DEACTIVATE_DIR=$PREFIX/etc/conda/deactivate.d
+ACTIVATE_DIR="$PREFIX/etc/conda/activate.d"
+DEACTIVATE_DIR="$PREFIX/etc/conda/deactivate.d"
 
-mkdir -p $ACTIVATE_DIR
-mkdir -p $DEACTIVATE_DIR
+mkdir -p "$ACTIVATE_DIR"
+mkdir -p "$DEACTIVATE_DIR"
 
-cp $RECIPE_DIR/scripts/activate.sh $ACTIVATE_DIR/ncl-activate.sh
-cp $RECIPE_DIR/scripts/deactivate.sh $DEACTIVATE_DIR/ncl-deactivate.sh
+cp "$RECIPE_DIR/scripts/activate.sh" "$ACTIVATE_DIR/ncl-activate.sh"
+cp "$RECIPE_DIR/scripts/deactivate.sh" "$DEACTIVATE_DIR/ncl-deactivate.sh"
