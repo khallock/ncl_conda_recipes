@@ -30,6 +30,7 @@ requirements:
     - cairo [linux]
     - udunits2
     - bzip2
+    - szip
 
   run:
     - libgcc
@@ -52,6 +53,7 @@ requirements:
     - udunits2
     - bzip2
     - krb5
+    - szip
 
 test:
   commands:
