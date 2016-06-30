@@ -6,4 +6,8 @@ for variable in $(env | grep '^NCARG_');  do
     unset ${var_name}
 done
 
-export NCARG_ROOT="$(cd ${CONDA_ENV_PATH} && pwd)"
+if [ ! -z "${CONDA_ENV_PATH}" ]; then
+    export NCARG_ROOT="$(cd ${CONDA_ENV_PATH} && pwd)"
+elif [ ! -z "${CONDA_PREFIX}" ]; then
+    export NCARG_ROOT="$(cd ${CONDA_PREFIX} && pwd)"
+fi
